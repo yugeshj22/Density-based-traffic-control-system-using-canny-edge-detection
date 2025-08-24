@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url("/static/bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .result-box {
+            background: rgba(46, 46, 46, 0.85);
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+        }
+        .highlight {
+            color: #00ff99;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        img {
+            margin-top: 20px;
+            width: 500px;
+            border: 3px solid #00ffff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Traffic Analysis Result</h2>
+    <div class="result-box">
+        <p>White Pixel Count (Density): <span class="highlight">{{ density }}</span></p>
+        <p>Recommended Green Signal Time: <span class="highlight">{{ time }} seconds</span></p>
+    </div>
+    <img src="/static/uploads/{{ image }}">
+</body>
+</html>
